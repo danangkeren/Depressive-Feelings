@@ -2,15 +2,18 @@ const menu = document.querySelector('.menu');
 const nav = document.querySelector('#nav');
 
 menu.addEventListener('click', () => {
-  const isOpen = nav.style.display === 'flex';
+  nav.classList.toggle('open');
 
-  nav.style.display = isOpen ? 'none' : 'flex';
-  menu.setAttribute('aria-expanded', !isOpen);
+  const isOpen = nav.classList.contains('open');
+  menu.setAttribute('aria-expanded', isOpen);
 });
 
 nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    nav.style.display = 'none';
-    menu.setAttribute('aria-expanded', 'false');
+    // Hanya menutup menu pada tampilan mobile
+    if (window.innerWidth <= 768) {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+    }
   });
 });
