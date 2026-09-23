@@ -10,8 +10,7 @@ menu.addEventListener('click', () => {
 
 nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    // Hanya menutup menu pada tampilan mobile
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 850) {
       nav.classList.remove('open');
       menu.setAttribute('aria-expanded', 'false');
     }
