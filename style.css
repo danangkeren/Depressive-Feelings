@@ -1111,117 +1111,97 @@ footer p{
 
 
 
-```css
 /* =========================
    QUOTES
 ========================= */
 
-.quotes-section{
-  background:linear-gradient(
-    180deg,
-    #fff0f4 0%,
-    #fbe5eb 100%
-  );
-  border-top:1px solid #ead0d8;
-  border-bottom:1px solid #ead0d8;
+.quotes-section {
+  background: #ffe6ec;
+  border-top: 1px solid #f3c5d0;
+  border-bottom: 1px solid #f3c5d0;
 }
 
-.quotes-section .eyebrow{
-  color:#b45f78;
+.quotes-section .eyebrow {
+  color: #b45f78;
 }
 
-.quotes-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:24px;
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.quote-card{
-  position:relative;
-  padding:38px;
-  min-height:240px;
-  background:#fff;
-  border:1px solid #ead9df;
-  border-radius:24px;
-  box-shadow:0 12px 35px rgba(84,45,60,.08);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  overflow:hidden;
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+.quote-card {
+  position: relative;
+  padding: 38px;
+  min-height: 240px;
+  background: #ffffff;
+  border: 1px solid #f0cdd6;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(180, 95, 120, 0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.quote-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 18px 40px rgba(84,45,60,.12);
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(180, 95, 120, 0.15);
 }
 
-.quote-card:nth-child(odd){
-  background:#fffafd;
+.quote-card:nth-child(even) {
+  background: #fff5f7;
 }
 
-.quote-card:nth-child(even){
-  background:#fff6f8;
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  line-height: 1;
+  color: #e5a0b2;
+  opacity: .8;
 }
 
-.quote-mark{
-  position:absolute;
-  top:10px;
-  left:25px;
-  font-family:"Playfair Display",serif;
-  font-size:80px;
-  line-height:1;
-  color:#e0a6b7;
-  opacity:.8;
+.quote-card p {
+  position: relative;
+  margin: 25px 0 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  line-height: 1.55;
+  color: #3d2931;
+  max-width: 600px;
 }
 
-.quote-card p{
-  position:relative;
-  margin:25px 0 20px;
-  font-family:"Playfair Display",serif;
-  font-size:22px;
-  line-height:1.55;
-  color:var(--ink);
-  max-width:600px;
+.quote-line {
+  width: 50px;
+  height: 3px;
+  border-radius: 10px;
+  background: #d97994;
 }
 
-.quote-line{
-  width:50px;
-  height:3px;
-  border-radius:10px;
-  background:#d1849d;
+@media (max-width: 850px) {
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:850px){
-
-  .quotes-grid{
-    grid-template-columns:1fr;
+@media (max-width: 560px) {
+  .quote-card {
+    padding: 28px;
+    min-height: 220px;
   }
 
+  .quote-card p {
+    font-size: 20px;
+  }
+
+  .quote-mark {
+    font-size: 70px;
+  }
 }
-
-@media(max-width:560px){
-
-  .quote-card{
-    padding:28px;
-    min-height:220px;
-  }
-
-  .quote-card p{
-    font-size:20px;
-  }
-
-  .quote-mark{
-    font-size:70px;
-  }
-
-}
-```
 
 
