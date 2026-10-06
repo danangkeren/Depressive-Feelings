@@ -18,6 +18,7 @@
       <a href="#signs">Tanda</a>
       <a href="#support">Dukungan</a>
       <a href="#help">When to seek help</a>
+      <a href="#consultation">Konsultansi</a>
     </nav>
   </header>
 
@@ -133,11 +134,141 @@
           <h3>Jika keselamatan terasa terancam</h3>
           <p>Jika kamu merasa tidak aman, memiliki pikiran untuk menyakiti diri atau mengakhiri hidup, atau khawatir seseorang berada dalam bahaya, jangan menghadapi situasi itu sendirian.</p>
           <ol>
-            <li>Segera beri tahu orang dewasa/orang terpercaya di dekatmu.</li>
+            <li>Segera beri tahu orang dewasa/orang tepercaya di dekatmu.</li>
             <li>Jangan sendirian; pindah ke tempat yang aman dan ramai bila memungkinkan.</li>
             <li>Hubungi layanan darurat setempat atau pergi ke fasilitas kesehatan terdekat.</li>
           </ol>
         </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         05 • KONSULTANSI & RUANG CERITA
+         ===================================================== -->
+    <section id="consultation" class="section consult" aria-labelledby="consultTitle">
+      <div class="row g-5 align-items-start">
+
+        <!-- Informasi -->
+        <div class="col-12 col-lg-5">
+          <div class="consult-info">
+            <p class="eyebrow">05 • KONSULTANSI</p>
+            <h2 id="consultTitle">Ruang Cerita</h2>
+            <p class="consult-sub">Tidak apa-apa untuk bercerita. Ceritakan apa yang sedang kamu rasakan, kami siap mendengarkan.</p>
+            <p class="consult-desc">Terkadang, mengungkapkan apa yang ada di dalam pikiran dapat membuat hati terasa sedikit lebih lega. Di sini, kamu dapat berbagi cerita, perasaan, kekhawatiran, atau pengalaman yang sedang kamu alami tanpa takut dihakimi.</p>
+
+            <ul class="consult-points">
+              <li>
+                <span class="point-icon"><i class="bi bi-chat-heart" aria-hidden="true"></i></span>
+                <div><strong>Tanpa penghakiman</strong><span>Tulis apa adanya, dengan kata-katamu sendiri.</span></div>
+              </li>
+              <li>
+                <span class="point-icon"><i class="bi bi-person-hearts" aria-hidden="true"></i></span>
+                <div><strong>Cukup nama panggilan</strong><span>Tidak perlu email, nomor telepon, atau data pribadi lainnya.</span></div>
+              </li>
+              <li>
+                <span class="point-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+                <div><strong>Ditinjau lebih dulu</strong><span>Tidak ada cerita yang tampil di website sebelum dibaca dan disetujui pengelola.</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-12 col-lg-7">
+          <div class="story-card">
+            <form id="storyForm" novalidate>
+              <div class="field">
+                <label for="storyName">Nama / Nama Panggilan <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="storyName" name="name" maxlength="50" autocomplete="nickname"
+                       placeholder="Masukkan nama atau nama panggilanmu..."
+                       required aria-required="true" aria-describedby="storyNameHint storyNameError">
+                <p class="field-hint" id="storyNameHint">Boleh memakai nama samaran. Nama ini bisa tampil jika ceritamu disetujui.</p>
+                <p class="field-error" id="storyNameError"></p>
+              </div>
+
+              <div class="field">
+                <label for="storyMessage">Ceritakan apa yang sedang kamu rasakan <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="storyMessage" name="message" rows="8" maxlength="1500"
+                          placeholder="Tuliskan apa yang ingin kamu ceritakan di sini..."
+                          required aria-required="true" aria-describedby="storyMessageHint storyMessageError"></textarea>
+                <div class="field-meta">
+                  <p class="field-hint" id="storyMessageHint">Mohon tidak menuliskan alamat, nomor telepon, atau data pribadi.</p>
+                  <span class="counter" id="storyCounter" aria-hidden="true">0 / 1500</span>
+                </div>
+                <p class="field-error" id="storyMessageError"></p>
+              </div>
+
+              <!-- Honeypot anti-spam: biarkan kosong, disembunyikan dari pengguna -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="storyWebsite">Jangan diisi</label>
+                <input type="text" id="storyWebsite" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="field check-field">
+                <label class="check" for="storyConsent">
+                  <input type="checkbox" id="storyConsent" name="consent" required aria-required="true" aria-describedby="storyConsentError">
+                  <span>Saya memahami bahwa cerita yang saya kirim akan digunakan untuk keperluan pengelolaan Ruang Cerita.</span>
+                </label>
+                <p class="field-error" id="storyConsentError"></p>
+              </div>
+
+              <div class="form-alert" id="storyAlert" role="alert" hidden></div>
+
+              <button type="submit" class="consult-btn" id="storySubmit">
+                <i class="bi bi-send-fill btn-icon" aria-hidden="true"></i>
+                <span class="spin" aria-hidden="true"></span>
+                <span class="btn-label">Kirim Cerita</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Disclaimer -->
+          <aside class="consult-disclaimer" aria-label="Catatan penting">
+            <i class="bi bi-info-circle" aria-hidden="true"></i>
+            <div>
+              <p>Ruang Cerita ini merupakan tempat untuk berbagi dan bukan pengganti psikolog, psikiater, dokter, atau tenaga profesional lainnya.</p>
+              <p>Jika kamu berada dalam kondisi darurat atau merasa tidak aman, segera hubungi orang yang kamu percaya atau layanan bantuan profesional di tempatmu.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Cerita publik (hanya nama + cerita yang sudah approved) -->
+      <div class="consult-stories" id="stories">
+        <div class="stories-head">
+          <p class="eyebrow">CERITA DARI PENGUNJUNG</p>
+          <h3>Cerita dari Mereka</h3>
+          <p>Setiap orang memiliki cerita. Kamu tidak sendirian.</p>
+        </div>
+
+        <div class="row g-4" id="storyList">
+          <!-- ===== DATA DUMMY (HANYA CONTOH DESAIN) =====
+               Otomatis diganti oleh JavaScript begitu Supabase sudah dikonfigurasi.
+               Jika ingin, kamu juga boleh menghapus 3 kolom di bawah ini. -->
+          <div class="col-12 col-md-6 col-lg-4" data-dummy>
+            <article class="story-item">
+              <span class="quote-icon"><i class="bi bi-quote" aria-hidden="true"></i></span>
+              <h4><i class="bi bi-heart-fill" aria-hidden="true"></i> Nama Pengguna</h4>
+              <p>Ini adalah contoh cerita pengguna.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-dummy>
+            <article class="story-item">
+              <span class="quote-icon"><i class="bi bi-quote" aria-hidden="true"></i></span>
+              <h4><i class="bi bi-heart-fill" aria-hidden="true"></i> Nama Pengguna</h4>
+              <p>Ini adalah contoh cerita pengguna.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4" data-dummy>
+            <article class="story-item">
+              <span class="quote-icon"><i class="bi bi-quote" aria-hidden="true"></i></span>
+              <h4><i class="bi bi-heart-fill" aria-hidden="true"></i> Nama Pengguna</h4>
+              <p>Ini adalah contoh cerita pengguna.</p>
+            </article>
+          </div>
+          <!-- ===== AKHIR DATA DUMMY ===== -->
+        </div>
+        <p class="story-empty" id="storyEmpty" hidden>Belum ada cerita yang ditampilkan. Kamu bisa menjadi yang pertama bercerita 🤍</p>
       </div>
     </section>
 
@@ -158,6 +289,15 @@
     <p>Materi edukasi — bukan pengganti diagnosis atau perawatan profesional.</p>
   </footer>
 
+  <!-- Modal sukses Ruang Cerita -->
+  <dialog id="thanksDialog" class="thanks-dialog" aria-labelledby="thanksTitle" aria-describedby="thanksText">
+    <div class="thanks-icon"><i class="bi bi-heart-fill" aria-hidden="true"></i></div>
+    <h3 id="thanksTitle">Terima kasih sudah mau bercerita 🤍</h3>
+    <p id="thanksText">Cerita kamu berhasil dikirim. Terima kasih sudah mempercayai kami untuk mendengarkan ceritamu.</p>
+    <p class="thanks-note">Ceritamu akan dibaca dan ditinjau lebih dulu sebelum (mungkin) ditampilkan.</p>
+    <button type="button" class="consult-btn" id="thanksClose">Tutup</button>
+  </dialog>
+
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
