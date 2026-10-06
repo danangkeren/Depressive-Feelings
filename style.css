@@ -1111,6 +1111,7 @@ footer p{
 
 
 
+```css
 /* =========================
    QUOTES
 ========================= */
@@ -1118,15 +1119,15 @@ footer p{
 .quotes-section{
   background:linear-gradient(
     180deg,
-    #f1e7f8 0%,
-    #eee3f5 100%
+    #fff0f4 0%,
+    #fbe5eb 100%
   );
-  border-top:1px solid #ddd0ec;
-  border-bottom:1px solid #ddd0ec;
+  border-top:1px solid #ead0d8;
+  border-bottom:1px solid #ead0d8;
 }
 
 .quotes-section .eyebrow{
-  color:#80639d;
+  color:#b45f78;
 }
 
 .quotes-grid{
@@ -1140,7 +1141,7 @@ footer p{
   padding:38px;
   min-height:240px;
   background:#fff;
-  border:1px solid #ddd0ec;
+  border:1px solid #ead9df;
   border-radius:24px;
   box-shadow:0 12px 35px rgba(84,45,60,.08);
   display:flex;
@@ -1162,7 +1163,7 @@ footer p{
 }
 
 .quote-card:nth-child(even){
-  background:#fdf8ff;
+  background:#fff6f8;
 }
 
 .quote-mark{
@@ -1172,7 +1173,7 @@ footer p{
   font-family:"Playfair Display",serif;
   font-size:80px;
   line-height:1;
-  color:#c5a8d8;
+  color:#e0a6b7;
   opacity:.8;
 }
 
@@ -1190,7 +1191,7 @@ footer p{
   width:50px;
   height:3px;
   border-radius:10px;
-  background:#b895cf;
+  background:#d1849d;
 }
 
 /* =========================
@@ -1221,4 +1222,6 @@ footer p{
   }
 
 }
+```
+
 
