@@ -58,14 +58,13 @@ nav.querySelectorAll('a').forEach(link => {
    }
    ===================================================== */
 
-const firebaseConfig = {
+const FIREBASE_CONFIG = {
   apiKey: "AIzaSyAfSvbvEzlfTNRY4qbbw3VW3TIhweJ1UAA",
   authDomain: "depresive.firebaseapp.com",
-  databaseURL: "https://depresive-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "depresive",
   storageBucket: "depresive.firebasestorage.app",
   messagingSenderId: "430803922436",
-  appId: "1:430803922436:web:2d7b929d8fdd26964acf51",
+  appId: "1:430803922436:web:2d7b929d8fdd26964acf51"
 };
 
 (function storyRoom() {
