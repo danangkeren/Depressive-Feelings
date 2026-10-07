@@ -58,13 +58,14 @@ nav.querySelectorAll('a').forEach(link => {
    }
    ===================================================== */
 
-const FIREBASE_CONFIG = {
-  apiKey: "ISI_API_KEY_ANDA",
-  authDomain: "ISI_PROJECT_ID.firebaseapp.com",
-  projectId: "ISI_PROJECT_ID",
-  storageBucket: "ISI_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "ISI_SENDER_ID",
-  appId: "ISI_APP_ID"
+const firebaseConfig = {
+  apiKey: "AIzaSyAfSvbvEzlfTNRY4qbbw3VW3TIhweJ1UAA",
+  authDomain: "depresive.firebaseapp.com",
+  databaseURL: "https://depresive-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "depresive",
+  storageBucket: "depresive.firebasestorage.app",
+  messagingSenderId: "430803922436",
+  appId: "1:430803922436:web:2d7b929d8fdd26964acf51",
 };
 
 (function storyRoom() {
